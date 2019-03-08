@@ -16,7 +16,7 @@ class Net(nn.Module):
         x = torch.nn.functional.sigmoid(self.hidtoout_layer(x))       #类似上面
         return x
 
-mnet = Net().cuda()
+mnet = Net().cuda()  # 使用GPU服务器
 target=Variable(torch.cuda.FloatTensor([0.01, 0.99]));   #目标输出
 input=Variable(torch.cuda.FloatTensor([0.05, 0.01]));    #输入
 
